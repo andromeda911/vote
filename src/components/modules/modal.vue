@@ -50,43 +50,49 @@
             transition: all 0.3s ease;
             width: 100%;
 
-            figure {
-                position: relative;
-            }
-
             canvas {
                 margin: auto;
                 display: block;
             }
+
+            h4 {
+                font-weight: 500;
+                margin: 1em 0 0;
+            }
+
             p {
+                font-size: 15px;
                 margin: 10px 0 0;
             }
-            .address {
-                word-break: break-all;
-            }
-            svg {
-                cursor: pointer;
-                margin: 1em auto 0;
-                text-align: center;
 
-                &:hover {
-                    color: #007dff;
+            address {
+                cursor: pointer;
+                font-style: normal;
+                font-weight: 500;
+                margin: 1em 0 0;
+                word-break: break-all;
+
+                small {
+                    display: block;
+                    opacity: 0.6;
                 }
-            }
-            .copy {
-                text-align: center;
+                &:hover {
+                    small {
+                        color: #007dff;
+                    }
+                }
             }
         }
     }
 
     /*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
+    * The following styles are auto-applied to elements with
+    * transition="modal" when their visibility is toggled
+    * by Vue.js.
+    *
+    * You can easily play with the modal transition by editing
+    * these styles.
+    */
 
     .modal-enter {
         opacity: 0;

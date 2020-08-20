@@ -16,7 +16,7 @@
                     Yes
                 </button>
 
-                <button class="button button__error" v-on:click="voteUp(obj.vote_down_addr)">
+                <button class="button button__error" v-on:click="voteDown(obj.vote_down_addr)">
                     No
                 </button>
             </div>
