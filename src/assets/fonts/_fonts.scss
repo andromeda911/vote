@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('~@/assets/fonts/Gilroy-Regular.eot');
+    src: local('~@/assets/fonts/Gilroy Regular'), local('~@/assets/fonts/Gilroy-Regular'),
+        url('~@/assets/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/Gilroy-Regular.woff2') format('woff2'), url('~@/assets/fonts/Gilroy-Regular.woff') format('woff'),
+        url('~@/assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('~@/assets/fonts/Gilroy-Medium.eot');
+    src: local('~@/assets/fonts/Gilroy Medium'), local('~@/assets/fonts/Gilroy-Medium'),
+        url('~@/assets/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/Gilroy-Medium.woff2') format('woff2'), url('~@/assets/fonts/Gilroy-Medium.woff') format('woff'),
+        url('~@/assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('~@/assets/fonts/icomoon.eot?3b6qz3');
+    src: url('~@/assets/fonts/icomoon.eot?3b6qz3#iefix') format('embedded-opentype'),
+        url('~@/assets/fonts/icomoon.ttf?3b6qz3') format('truetype'), url('~@/assets/fonts/icomoon.woff?3b6qz3') format('woff'),
+        url('~@/assets/fonts/icomoon.svg?3b6qz3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+    content: '\e900';
+}
+.icon-chevron-up:before {
+    content: '\e901';
+}
+.icon-credit-card:before {
+    content: '\e902';
+}
+.icon-facebook:before {
+    content: '\e903';
+}
+.icon-globe:before {
+    content: '\e904';
+}
+.icon-instagram:before {
+    content: '\e905';
+}
+.icon-menu:before {
+    content: '\e906';
+}
+.icon-send:before {
+    content: '\e907';
+}
+.icon-smartphone:before {
+    content: '\e908';
+}
+.icon-thumbs-down:before {
+    content: '\e909';
+}
+.icon-thumbs-up:before {
+    content: '\e90a';
+}
+.icon-twitter:before {
+    content: '\e90b';
+}
