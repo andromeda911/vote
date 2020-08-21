@@ -11,7 +11,7 @@
                 :down="Math.ceil(downBalance) || Math.ceil(obj.vote_down_bal)"
             />
 
-            <div class="button-group" v-if="$route.name != 'home' && $route.name != 'voteList'">
+            <div class="button-group" v-if="$route.name != 'home' && $route.name != 'current'">
                 <button class="button button__success" v-on:click="voteUp(obj.vote_up_addr)">
                     Yes
                 </button>

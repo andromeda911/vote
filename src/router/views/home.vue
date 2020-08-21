@@ -10,13 +10,14 @@
 
         <main-example />
 
-        <main-votelist :title="'Current voting'" />
+        <main-votelist :title="'Current vote'" />
 
         <main-votenext />
 
         <main-slogan
             :text="'We want to receive feedback from you. If you have ideas of voting — don`t hesitate to offer it.'"
             :buttonText="'Suggest a voting topic'"
+            :url="'topic'"
         />
     </section>
 </template>

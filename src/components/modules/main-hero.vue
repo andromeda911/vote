@@ -7,7 +7,7 @@
         <p class="hero__body">
             Help us to make the right decisions that will fit you.
         </p>
-        <gradient-button :text="'Give your vote'" :url="'vote-list'" />
+        <gradient-button :text="'Give your vote'" :url="'current'" />
     </div>
 </template>
 

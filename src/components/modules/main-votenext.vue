@@ -1,6 +1,6 @@
 <template>
     <div class="vote-previous">
-        <h3>Next voting</h3>
+        <h3 v-if="$route.name != 'completed'">Next vote</h3>
 
         <div class="vote-previous__list">
             <article>
@@ -22,7 +22,7 @@
             </article>
         </div>
 
-        <a v-if="$route.name != 'voteList'" href="" class="button">View more</a>
+        <a v-if="$route.name != 'current'" href="" class="button">View more</a>
     </div>
 </template>
 

@@ -6,7 +6,7 @@
             <vote-card v-for="i in data" :key="i.id" :id="i.id" :obj="i" />
         </div>
 
-        <router-link v-if="$route.name != 'voteList' && $route.name != 'vote'" class="button" to="/vote-list"
+        <router-link v-if="$route.name != 'current' && $route.name != 'vote'" class="button" to="/current"
             >View all open voting</router-link
         >
     </div>

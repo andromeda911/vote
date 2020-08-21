@@ -13,12 +13,20 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ './views/home.vue'),
     },
     {
-        path: '/vote-list',
-        name: 'voteList',
+        path: '/current',
+        name: 'current',
         // route level code-splitting
-        // this generates a separate chunk (votelist.[hash].js) for this route
+        // this generates a separate chunk (current.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "votelist" */ './views/vote-list.vue'),
+        component: () => import(/* webpackChunkName: "current" */ './views/current.vue'),
+    },
+    {
+        path: '/topic',
+        name: 'topic',
+        // route level code-splitting
+        // this generates a separate chunk (topic.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "topic" */ './views/topic.vue'),
     },
     {
         path: '/vote/:id',
@@ -27,6 +35,14 @@ const routes = [
         // this generates a separate chunk (vote.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "vote" */ './views/vote.vue'),
+    },
+    {
+        path: '/completed',
+        name: 'completed',
+        // route level code-splitting
+        // this generates a separate chunk (completed.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "completed" */ './views/completed.vue'),
     },
 ]
 

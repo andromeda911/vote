@@ -1,16 +1,20 @@
 <template>
     <div class="slogan">
+        <h1 v-if="title">{{ title }}</h1>
         <p class="slogan__body">
             {{ text }}
         </p>
 
-        <gradient-button v-if="buttonText" :text="buttonText" />
+        <gradient-button v-if="buttonText" :text="buttonText" :url="url" />
     </div>
 </template>
 
 <script>
     export default {
         props: {
+            title: {
+                type: String,
+            },
             text: {
                 type: String,
                 default:
@@ -19,6 +23,10 @@
             buttonText: {
                 type: String,
                 default: '',
+            },
+            url: {
+                type: String,
+                default: null,
             },
         },
     }
@@ -31,6 +39,7 @@
         background-size: 116%;
         display: inline-grid;
         margin: 4em 0;
+        padding: 4em 0;
         max-width: 100%;
         width: 100%;
 
@@ -42,14 +51,23 @@
             margin: 0;
         }
 
+        h1 {
+            font-size: 48px;
+            font-weight: 500;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
+        }
+
         &__body {
             font-size: 20px;
             font-weight: 500;
-            padding: 2em 0;
+            padding: 1em 0 2em;
             margin: 0 auto;
             max-width: 572px;
             text-align: center;
-            padding: 4em 0;
             display: block;
 
             @media (max-width: 768px) {

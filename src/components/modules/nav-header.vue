@@ -4,7 +4,7 @@
 
         <ul class="nav-items">
             <li class="nav-items__item">
-                <router-link active-class="active" class="nav-items__item-link" to="/vote-list">Current voting</router-link>
+                <router-link active-class="active" class="nav-items__item-link" to="/current">Current voting</router-link>
             </li>
 
             <li class="nav-items__item">
