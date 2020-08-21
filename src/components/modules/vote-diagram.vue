@@ -53,7 +53,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 0.5em 0 0;
-        transition: all 1s ease-in-out;
+        transition: all 2s ease-in-out;
 
         &__items {
             display: grid;

@@ -18,10 +18,10 @@
             <qrcode :value="modalData.token" :options="{ width: 240, margin: 0 }"></qrcode>
             <h4>{{ $t('main[8][0]') }}</h4>
 
-            <address v-clipboard="modalData.token" v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'" v-if="!active">
-                {{ modalData.token }} <small>{{ $t('main[8][1]') }}</small>
+            <address v-clipboard="modalData.token" v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'">
+                {{ modalData.token }} <small v-if="!active">{{ $t('main[8][1]') }}</small>
+                <small v-else>{{ $t('main[8][2]') }}</small>
             </address>
-            <small v-else>{{ $t('main[8][2]') }}</small>
         </modal>
     </body>
 </template>
