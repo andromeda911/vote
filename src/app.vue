@@ -13,12 +13,15 @@
         </footer>
         <!-- use the modal component, pass in the prop -->
         <modal v-if="modal">
+            <i class="icon-x" v-on:click="close"></i>
+            <b>{{ $t('main[2][1]') }}</b>
             <qrcode :value="modalData.token" :options="{ width: 240, margin: 0 }"></qrcode>
             <h4>{{ $t('main[8][0]') }}</h4>
 
-            <address v-clipboard="modalData.token">
+            <address v-clipboard="modalData.token" v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'" v-if="!active">
                 {{ modalData.token }} <small>{{ $t('main[8][1]') }}</small>
             </address>
+            <small v-else>{{ $t('main[8][2]') }}</small>
         </modal>
     </body>
 </template>
@@ -31,15 +34,19 @@
             return {
                 modal: false,
                 modalData: [],
+                active: false,
             }
+        },
+        methods: {
+            close() {
+                this.modal = !this.modal
+                this.active = false
+            },
         },
         created() {
             bus.$on('setModal', data => {
                 this.modal = !this.modal
                 this.modalData = data
-            })
-            bus.$on('close', data => {
-                this.modal = !this.modal
             })
         },
     }

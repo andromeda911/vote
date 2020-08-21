@@ -1,6 +1,7 @@
 <template>
     <transition name="modal">
-        <div class="modal__mask" v-on:click="close">
+        <!-- <div class="modal__mask" v-on:click="close"> -->
+        <div class="modal__mask">
             <div class="modal__container">
                 <slot></slot>
             </div>
@@ -9,15 +10,7 @@
 </template>
 
 <script>
-    import { bus } from '@/main.js'
-
-    export default {
-        methods: {
-            close() {
-                bus.$emit('close', true)
-            },
-        },
-    }
+    export default {}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -49,6 +42,15 @@
 
             transition: all 0.3s ease;
             width: 100%;
+            position: relative;
+
+            i {
+                cursor: pointer;
+                font-size: 24px;
+                right: 10px;
+                top: 15px;
+                position: absolute;
+            }
 
             canvas {
                 margin: auto;
@@ -63,6 +65,16 @@
             p {
                 font-size: 15px;
                 margin: 10px 0 0;
+            }
+
+            b {
+                font-weight: 500;
+                margin: 0 0 1em;
+            }
+
+            small {
+                margin: 1em 0 0;
+                opacity: 0.6;
             }
 
             address {

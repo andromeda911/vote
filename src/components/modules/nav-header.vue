@@ -114,6 +114,7 @@
                 }
 
                 &-locale {
+                    display: inline-block;
                     margin-left: 1em;
                     position: relative;
                     text-transform: capitalize;
@@ -122,7 +123,6 @@
                         margin: 0;
 
                         &::before {
-                            left: 2em !important;
                             position: absolute;
                         }
                     }

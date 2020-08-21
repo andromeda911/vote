@@ -9,7 +9,8 @@
             "TBCC is growing and developing and we want our users to take an active part in innovations. For this purpose, we have created a service for online voting. With it, you can cast your vote for or against new activity."
         ],
         [
-            "The mechanish of voting is quite simple. You have to choose the topic, that you are interested in, select your answer for it `Yes` or `No` and finish voting with your Vote (Bep8)."
+            "The mechanish of voting is quite simple. You have to choose the topic, that you are interested in, select your answer for it `Yes` or `No` and finish voting with your Vote (Bep8).",
+            "1 vote = 1 Vote (BEP8)"
         ],
         ["Current vote", "View all open voting", "Votes", "Vote now", "Yes", "No"],
         ["Next vote", "View more"],
@@ -20,7 +21,7 @@
             "You can vote as many times as you want until the time of current voting is finished. Don't waste your time — give your vote now!",
             "View all open voting"
         ],
-        ["Please vote by sending your VOTE (Bep8) tokens to the address:", "click to copy address"]
+        ["Please vote by sending your VOTE (Bep8) tokens to the address:", "click to copy address", "the address on the clipboard!"]
     ],
     "current": [["Give your vote now"]],
     "completed": [["Completed voting", "You can find previous voting with its results below"]],

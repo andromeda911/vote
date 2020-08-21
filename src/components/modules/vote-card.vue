@@ -5,7 +5,7 @@
         </figure>
         <div class="vote-diagram">
             <h4>{{ obj.vote_title }}</h4>
-
+            {{ $t('main[2][1]') }}
             <vote-diagram
                 :up="Math.ceil(upBalance) || Math.ceil(obj.vote_up_bal)"
                 :down="Math.ceil(downBalance) || Math.ceil(obj.vote_down_bal)"

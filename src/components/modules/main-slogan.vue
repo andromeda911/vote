@@ -39,7 +39,7 @@
         background-size: 116%;
         display: inline-grid;
         margin: 4em 0;
-        padding: 4em 0;
+        padding: 4em 1em;
         max-width: 100%;
         width: 100%;
 
