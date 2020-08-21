@@ -2,7 +2,24 @@
     <nav class="nav">
         <nav-brand />
 
-        <ul class="nav-items">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="31"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="nav-menu"
+            v-on:click="toggle = !toggle"
+            :aria-pressed="toggle ? 'true' : 'false'"
+        >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+
+        <ul class="nav-items" :class="{ active: toggle }">
             <li class="nav-items__item">
                 <router-link active-class="active" class="nav-items__item-link" to="/current">Current voting</router-link>
             </li>
@@ -33,6 +50,7 @@
         data() {
             return {
                 active: false,
+                toggle: false,
             }
         },
     }
@@ -49,10 +67,22 @@
             text-align: center;
         }
 
+        &-menu {
+            cursor: pointer;
+
+            display: none;
+            margin: 2em auto 1em;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
         &-items {
             display: flex;
 
             @media (max-width: 768px) {
+                display: none;
                 flex-direction: column;
             }
 
@@ -109,5 +139,8 @@
                 }
             }
         }
+    }
+    .active {
+        display: inherit;
     }
 </style>
