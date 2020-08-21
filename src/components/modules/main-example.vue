@@ -3,7 +3,7 @@
         <ul class="vote-example__items">
             <li class="vote-example__items-item">
                 {{ $t('main[2][0]') }}
-                <span>1 vote = 1 Vote (BEP8)</span>
+                <span>{{ $t('main[2][1]') }}</span>
             </li>
 
             <li class="vote-example__items-item">
