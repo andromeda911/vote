@@ -2,8 +2,7 @@
     <div class="vote-example">
         <ul class="vote-example__items">
             <li class="vote-example__items-item">
-                The mechanish of voting is quite simple. You have to choose the topic, that you are interested in, select your answer for it
-                "yes" or "no" and finish voting with your Vote (Bep8).
+                {{ $t('main[2][0]') }}
                 <span>1 vote = 1 Vote (BEP8)</span>
             </li>
 

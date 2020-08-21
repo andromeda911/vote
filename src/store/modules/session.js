@@ -15,43 +15,8 @@ const getters = {
 }
 
 const actions = {
-    async signin({ commit }, data) {
-        await axios
-            .post('auth/login', data)
-            .then(response => {
-                commit('responseData', response.data)
-
-                commit('responseStatus', response.data, { root: true })
-
-                axios.init()
-            })
-            .catch(error => {
-                commit('responseStatus', error.response.data, { root: true })
-            })
-    },
-
-    /**
-     * Logout the current user by removing the token from storage.
-     *
-     * Will also remove `Authorization <token>` header from requests.
-     **/
-    async signout({ commit }) {
-        axios.init()
-
-        await axios
-            .post('auth/logout')
-            .then(response => {
-                commit('responseStatus', response.data, { root: true })
-            })
-            .catch(error => {
-                commit('responseStatus', error.response.data, { root: true })
-            })
-        // Remove the token and remove axios header from /common/api
-        state.data = null
-
-        axios.close()
-
-        router.push('/')
+    sessionLocale({ commit }, locale) {
+        storage.set('session_data', { locale: locale })
     },
 }
 

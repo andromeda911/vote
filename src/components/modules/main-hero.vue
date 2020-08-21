@@ -1,13 +1,13 @@
 <template>
     <div class="hero">
         <h1 class="hero__title">
-            Participate in voting with<br />
+            {{ $t('main[0][0]') }}<br />
             Vote (BEP8)
         </h1>
         <p class="hero__body">
-            Help us to make the right decisions that will fit you.
+            {{ $t('main[0][1]') }}
         </p>
-        <gradient-button :text="'Give your vote'" :url="'current'" />
+        <gradient-button :text="$t('main[0][2]')" :url="'current'" />
     </div>
 </template>
 

@@ -1,3 +1,28 @@
 {
-    "data": ""
+    "navbar": [
+        ["Current voting", "Completed voting", "Suggest topic"],
+        ["Follow Us", "All rights reserved"]
+    ],
+    "main": [
+        ["Participate in voting with", "Help us to make the right decisions that will fit you.", "Give your vote"],
+        [
+            "TBCC is growing and developing and we want our users to take an active part in innovations. For this purpose, we have created a service for online voting. With it, you can cast your vote for or against new activity."
+        ],
+        [
+            "The mechanish of voting is quite simple. You have to choose the topic, that you are interested in, select your answer for it `Yes` or `No` and finish voting with your Vote (Bep8)."
+        ],
+        ["Current vote", "View all open voting", "Votes", "Vote now", "Yes", "No"],
+        ["Next vote", "View more"],
+        ["We want to receive feedback from you. If you have ideas of voting — don`t hesitate to offer it.", "Suggest a voting topic"],
+        ["Time's Up!", "Days", "Hours", "Minutes", "Seconds"],
+        [
+            "Voting",
+            "You can vote as many times as you want until the time of current voting is finished. Don't waste your time — give your vote now!",
+            "View all open voting"
+        ]
+    ],
+    "current": [["Give your vote now"]],
+    "completed": [["Completed voting", "You can find previous voting with its results below"]],
+    "topic": [["Suggest topic", "Coming soon.."]],
+    "errors": [["404", "Page not found."]]
 }

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <main-votelist :title="'Give your vote now'" :obj="votes" />
+        <main-votelist :title="$t('current[0][0]')" :obj="votes" />
         <main-votenext />
     </section>
 </template>

@@ -13,15 +13,15 @@
 
             <div class="button-group" v-if="$route.name != 'home' && $route.name != 'current'">
                 <button class="button button__success" v-on:click="voteUp(obj.vote_up_addr)">
-                    Yes
+                    {{ $t('main[3][4]') }}
                 </button>
 
                 <button class="button button__error" v-on:click="voteDown(obj.vote_down_addr)">
-                    No
+                    {{ $t('main[3][5]') }}
                 </button>
             </div>
 
-            <gradient-button v-if="$route.name != 'vote'" :text="'Vote now'" :url="'vote/' + obj.vote_id" />
+            <gradient-button v-if="$route.name != 'vote'" :text="$t('main[3][3]')" :url="'vote/' + obj.vote_id" />
         </div>
     </article>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        Votes
+        {{ $t('main[3][2]') }}
 
         <ul class="diagram" :style="gridStyle">
             <li class="diagram__up"></li>
@@ -9,12 +9,12 @@
 
         <ul class="diagram__items">
             <li class="diagram__up-item">
-                <span>Yes {{ percentage(up).toFixed(0) }} %</span>
+                <span>{{ $t('main[3][4]') }} {{ percentage(up).toFixed(0) }} %</span>
                 {{ up }} VOTE(BEP8)
             </li>
 
             <li class="diagram__down-item">
-                <span>No {{ percentage(down).toFixed(0) }}%</span>
+                <span>{{ $t('main[3][5]') }} {{ percentage(down).toFixed(0) }}%</span>
                 {{ down }} VOTE(BEP8)
             </li>
         </ul>

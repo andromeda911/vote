@@ -2,23 +2,15 @@
     <section>
         <main-hero />
 
-        <main-slogan
-            :text="
-                'TBCC is growing and developing and we want our users to take an active part in innovations. For this purpose, we have created a service for online voting. With it, you can cast your vote for or against new activity.'
-            "
-        />
+        <main-slogan :text="$t('main[1][0]')" />
 
         <main-example />
 
-        <main-votelist :title="'Current vote'" />
+        <main-votelist :title="$t('main[3][0]')" />
 
         <main-votenext />
 
-        <main-slogan
-            :text="'We want to receive feedback from you. If you have ideas of voting — don`t hesitate to offer it.'"
-            :buttonText="'Suggest a voting topic'"
-            :url="'topic'"
-        />
+        <main-slogan :text="$t('main[5][0]')" :buttonText="$t('main[5][1]')" :url="'topic'" />
     </section>
 </template>
 

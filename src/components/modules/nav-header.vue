@@ -21,24 +21,31 @@
 
         <ul class="nav-items" :class="{ active: toggle }">
             <li class="nav-items__item">
-                <router-link active-class="active" class="nav-items__item-link" to="/current">Current voting</router-link>
+                <router-link active-class="active" class="nav-items__item-link" to="/current">{{ $t('navbar[0][0]') }}</router-link>
             </li>
 
             <li class="nav-items__item">
-                <router-link active-class="active" class="nav-items__item-link" to="/completed">Completed voting</router-link>
+                <router-link active-class="active" class="nav-items__item-link" to="/completed">{{ $t('navbar[0][1]') }}</router-link>
             </li>
 
             <li class="nav-items__item">
-                <router-link active-class="active" class="nav-items__item-link" to="/topic">Suggest topic</router-link>
+                <router-link active-class="active" class="nav-items__item-link" to="/topic">{{ $t('navbar[0][2]') }}</router-link>
             </li>
 
             <ul class="nav-items__item">
                 <li class="nav-items__item-locale">
-                    <span class="nav-items__item-link" v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'">En</span>
+                    <span class="nav-items__item-link" v-on:click="active = !active" :aria-pressed="active ? 'true' : 'false'">{{
+                        $i18n.locale
+                    }}</span>
                 </li>
                 <ul class="nav-items__item-sub" v-if="active">
-                    <li class="nav-items__item-sub-link">Ru</li>
-                    <li class="nav-items__item-sub-link">Zh</li>
+                    <li
+                        v-for="l in locales"
+                        v-bind:key="l.id"
+                        v-on:click="sessionLocale(l), ($i18n.locale = l), (active = !active)"
+                        v-text="l"
+                        class="nav-items__item-sub-link"
+                    />
                 </ul>
             </ul>
         </ul>
@@ -46,12 +53,21 @@
 </template>
 
 <script>
+    import { mapGetters, mapActions } from 'vuex'
     export default {
         data() {
             return {
                 active: false,
                 toggle: false,
             }
+        },
+
+        computed: {
+            locales: self => self.$i18n.availableLocales.filter(l => l !== self.$i18n.locale),
+        },
+
+        methods: {
+            ...mapActions('Session', ['sessionLocale']),
         },
     }
 </script>
@@ -100,6 +116,7 @@
                 &-locale {
                     margin-left: 1em;
                     position: relative;
+                    text-transform: capitalize;
 
                     @media (max-width: 768px) {
                         margin: 0;
@@ -131,6 +148,7 @@
                     &-link {
                         cursor: pointer;
                         margin: 8px 0;
+                        text-transform: capitalize;
 
                         &:hover {
                             color: #007dff;

@@ -1,11 +1,9 @@
 <template>
     <nav class="nav">
         <ul class="nav-items">
-            <span>Follow Us</span>
+            <span>{{ $t('navbar[1][0]') }}</span>
             <nav-social class="nav-items__item" />
-            <li class="nav-items__item-copyright">
-                © 2018-2020 TBCC Inc. All rights reserved
-            </li>
+            <li class="nav-items__item-copyright">© 2018-2020 TBCC Inc. {{ $t('navbar[1][1]') }}</li>
         </ul>
     </nav>
 </template>

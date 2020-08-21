@@ -1,23 +1,11 @@
 <template>
     <section>
-        <main-slogan :title="'Suggest topic'" :text="'Coming soon..'" />
+        <main-slogan :title="$t('topic[0][0]')" :text="$t('topic[0][1]')" />
     </section>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                votes: [
-                    {
-                        userId: 1423,
-                        id: 1,
-                        title: 'Do you want TBCC Wallet to relise terminal for trading on Binance Dex?',
-                    },
-                ],
-            }
-        },
-    }
+    export default {}
 </script>
 
 <style lang="scss" scoped>

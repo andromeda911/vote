@@ -6,9 +6,9 @@
             <vote-card v-for="i in data" :key="i.id" :id="i.id" :obj="i" />
         </div>
 
-        <router-link v-if="$route.name != 'current' && $route.name != 'vote'" class="button" to="/current"
-            >View all open voting</router-link
-        >
+        <router-link v-if="$route.name != 'current' && $route.name != 'vote'" class="button" to="/current">{{
+            $t('main[3][1]')
+        }}</router-link>
     </div>
 </template>
 

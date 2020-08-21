@@ -1,13 +1,21 @@
 <template>
     <div>
         <ul class="text-center" v-if="currentTime">
-            <li v-if="days">{{ days }}<i>:</i><span>Days</span></li>
-            <li v-if="hours">{{ hours | formatTime }}<i>:</i><span>Hours</span></li>
-            <li>{{ minutes | formatTime }}<i>:</i><span>Minutes</span></li>
-            <li>{{ seconds | formatTime }}<span>Seconds</span></li>
+            <li v-if="days">
+                {{ days }}<i>:</i><span>{{ $t('main[6][1]') }}</span>
+            </li>
+            <li v-if="hours">
+                {{ hours | formatTime }}<i>:</i><span>{{ $t('main[6][2]') }}</span>
+            </li>
+            <li>
+                {{ minutes | formatTime }}<i>:</i><span>{{ $t('main[6][3]') }}</span>
+            </li>
+            <li>
+                {{ seconds | formatTime }}<span>{{ $t('main[6][4]') }}</span>
+            </li>
         </ul>
         <div class="text-center" v-if="!currentTime">
-            Time's Up!
+            {{ $t('main[6][0]') }}
         </div>
     </div>
 </template>

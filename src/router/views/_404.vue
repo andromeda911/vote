@@ -1,8 +1,6 @@
 <template>
     <section>
-        <main-slogan :title="$t('completed[0][0]')" :text="$t('completed[0][1]')" />
-
-        <main-votenext />
+        <main-slogan :title="$t('errors[0][0]')" :text="$t('errors[0][1]')" />
     </section>
 </template>
 

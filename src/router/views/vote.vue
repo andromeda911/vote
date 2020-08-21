@@ -7,16 +7,15 @@
                 <vote-card :obj="data" />
             </div>
 
-            <router-link v-if="$route.name != 'current' && $route.name != 'vote'" class="button" to="/current"
-                >View all open voting</router-link
-            >
+            <router-link v-if="$route.name != 'current' && $route.name != 'vote'" class="button" to="/current">{{
+                $t('main[7][2]')
+            }}</router-link>
         </div>
 
         <div class="heading">
-            <h2>Voting</h2>
+            <h2>{{ $t('main[7][0]') }}</h2>
             <p>
-                You can vote as many times as you want until the time of current voting is finished. Don't waste your time — give your vote
-                now!
+                {{ $t('main[7][1]') }}
             </p>
 
             <timer :deadline="data.date_end.slice(0, 10)"></timer>

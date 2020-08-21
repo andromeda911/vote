@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import _404 from './views/_404.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,6 +45,11 @@ const routes = [
         // this generates a separate chunk (completed.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "completed" */ './views/completed.vue'),
+    },
+    {
+        path: '*',
+        name: '_404',
+        component: _404,
     },
 ]
 
