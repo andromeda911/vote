@@ -21,7 +21,7 @@
                 </button>
             </div>
 
-            <gradient-button v-if="$route.name != 'vote'" :text="$t('main[3][3]')" :url="'vote/' + obj.vote_id" />
+            <gradient-button v-if="$route.name != 'vote'" :text="$t('main[3][3]')" :url="'current/' + obj.vote_id" />
         </div>
     </article>
 </template>

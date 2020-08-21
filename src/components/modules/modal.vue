@@ -56,7 +56,7 @@
             }
 
             h4 {
-                font-weight: 500;
+                font-weight: normal;
                 margin: 1em 0 0;
             }
 

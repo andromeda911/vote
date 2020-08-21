@@ -19,7 +19,8 @@
             "Voting",
             "You can vote as many times as you want until the time of current voting is finished. Don't waste your time — give your vote now!",
             "View all open voting"
-        ]
+        ],
+        ["Please vote by sending your VOTE (Bep8) tokens to the address:", "click to copy address"]
     ],
     "current": [["Give your vote now"]],
     "completed": [["Completed voting", "You can find previous voting with its results below"]],

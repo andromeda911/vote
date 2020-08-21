@@ -14,11 +14,11 @@
         <!-- use the modal component, pass in the prop -->
         <modal v-if="modal">
             <qrcode :value="modalData.token" :options="{ width: 240, margin: 0 }"></qrcode>
-            <h4>Cast your vote {{ modalData.method }}.</h4>
+            <h4>{{ $t('main[8][0]') }}</h4>
 
-            <p>List your VOTE(BEP8) tokens to the address</p>
-
-            <address v-clipboard="modalData.token">{{ modalData.token }} <small>click to copy address</small></address>
+            <address v-clipboard="modalData.token">
+                {{ modalData.token }} <small>{{ $t('main[8][1]') }}</small>
+            </address>
         </modal>
     </body>
 </template>
