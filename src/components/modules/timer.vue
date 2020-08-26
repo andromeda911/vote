@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul class="text-center" v-if="currentTime">
+        <ul class="text-center" v-if="Date.parse(this.deadline) >= Date.parse(new Date())">
             <li v-if="days">
                 {{ days }}<i>:</i><span>{{ $t('main[6][1]') }}</span>
             </li>
@@ -14,7 +14,7 @@
                 {{ seconds | formatTime }}<span>{{ $t('main[6][4]') }}</span>
             </li>
         </ul>
-        <div class="text-center" v-if="!currentTime">
+        <div class="text-center" v-else>
             {{ $t('main[6][0]') }}
         </div>
     </div>

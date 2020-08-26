@@ -21,7 +21,14 @@
                 </button>
             </div>
 
-            <gradient-button v-if="$route.name != 'vote'" :text="$t('main[3][3]')" :url="'current/' + obj.vote_id" />
+            <gradient-button
+                v-if="$route.name != 'vote' && Date.parse(obj.date_end.slice(0, 10)) >= Date.parse(new Date())"
+                :text="$t('main[3][3]')"
+                :url="'current/' + obj.vote_id"
+            />
+            <div class="" v-else>
+                The vote is completed.
+            </div>
         </div>
     </article>
 </template>

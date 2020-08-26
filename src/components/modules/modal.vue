@@ -68,6 +68,7 @@
             }
 
             b {
+                font-size: 15px;
                 font-weight: 500;
                 margin: 0 0 1em;
             }

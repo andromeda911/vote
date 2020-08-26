@@ -1,24 +1,12 @@
 <template>
     <section>
-        <main-votelist :title="$t('current[0][0]')" :obj="votes" />
+        <main-votelist :title="$t('current[0][0]')" />
         <main-votenext />
     </section>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                votes: [
-                    {
-                        userId: 1423,
-                        id: 1,
-                        title: 'Do you want TBCC Wallet to relise terminal for trading on Binance Dex?',
-                    },
-                ],
-            }
-        },
-    }
+    export default {}
 </script>
 
 <style lang="scss" scoped>

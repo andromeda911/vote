@@ -1,6 +1,6 @@
 <template>
     <section v-if="data">
-        <div class="vote">
+        <div class="vote" v-if="Date.parse(data.date_end.slice(0, 10)) >= currentTime">
             <h3>{{ data.vote_title }}</h3>
 
             <div class="vote__list">
@@ -28,6 +28,11 @@
 <script>
     import { mapGetters, mapActions } from 'vuex'
     export default {
+        data() {
+            return {
+                currentTime: Date.parse(new Date()),
+            }
+        },
         computed: {
             ...mapGetters({
                 obj: 'Data/responseData',
