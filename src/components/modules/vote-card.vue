@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article v-if="Date.parse(obj.date_end.slice(0, 10)) >= Date.parse(new Date())">
         <figure>
             <img :src="image" alt="" />
         </figure>
@@ -26,9 +26,6 @@
                 :text="$t('main[3][3]')"
                 :url="'current/' + obj.vote_id"
             />
-            <div class="" v-else>
-                The vote is completed.
-            </div>
         </div>
     </article>
 </template>
