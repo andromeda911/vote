@@ -1,22 +1,28 @@
 <template>
     <div>
-        {{ $t('main[3][2]') }}
+        <!-- {{ $t('main[3][2]') }} -->
+        <!-- {{ $t('main[2][1]') }} -->
 
-        <ul class="diagram" :style="gridStyle">
-            <li class="diagram__up"></li>
-            <li class="diagram__down"></li>
+        <ul class="diagram__header">
+            <li>Votes</li>
+            <li>20 000</li>
+            <li>MAX</li>
+        </ul>
+
+        <ul class="diagram">
+            <li class="diagram__up" :style="gridStyle"></li>
         </ul>
 
         <ul class="diagram__items">
             <li class="diagram__up-item">
-                <span>{{ $t('main[3][4]') }} {{ percentage(up).toFixed(0) }} %</span>
+                <!-- <span>{{ $t('main[3][4]') }} {{ percentage(up).toFixed(1) }} %</span> -->
                 {{ up }} VOTE(BEP8)
             </li>
 
-            <li class="diagram__down-item">
+            <!-- <li class="diagram__down-item">
                 <span>{{ $t('main[3][5]') }} {{ percentage(down).toFixed(0) }}%</span>
                 {{ down }} VOTE(BEP8)
-            </li>
+            </li> -->
         </ul>
     </div>
 </template>
@@ -30,7 +36,7 @@
         computed: {
             gridStyle() {
                 return {
-                    gridTemplateColumns: `${this.up || 1}fr ${this.down || 1}fr`,
+                    width: `${this.percentage(this.up).toFixed(1) || 1}%`,
                 }
             },
             // getUpData() {
@@ -42,7 +48,7 @@
         },
         methods: {
             percentage(val) {
-                return (val / (this.up + this.down)) * 100 || 0
+                return (val / this.down) * 100 || 0
             },
         },
     }
@@ -50,10 +56,32 @@
 
 <style lang="scss" scoped>
     .diagram {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 0.5em 0 0;
+        background-color: #eeeeee;
+        margin: 1em 0 0;
         transition: all 2s ease-in-out;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                padding: 0;
+                position: relative;
+
+                &:nth-child(2) {
+                    &::after {
+                        content: '';
+                        border-left: 1px dotted;
+                        position: absolute;
+                        top: 36px;
+                        height: 20px;
+                        z-index: 1;
+                        right: 50%;
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
 
         &__items {
             display: grid;
@@ -69,16 +97,17 @@
             border-top: 6px solid #27ae60;
             padding: 0;
 
-            &::after {
-                content: '';
-                border-right: 1px dotted;
-                top: -12px;
-                right: 0;
-                height: 20px;
-                position: absolute;
-            }
+            // &::after {
+            //     content: '';
+            //     border-right: 1px dotted;
+            //     top: -12px;
+            //     right: 0;
+            //     height: 20px;
+            //     position: absolute;
+            // }
 
             &-item {
+                margin: 0.6em 0;
                 span {
                     position: relative;
                     padding-right: 2em;

@@ -80,6 +80,7 @@
             font-size: 32px;
             font-weight: 400;
             margin-bottom: 1em;
+            max-width: 820px;
 
             text-align: left;
 
