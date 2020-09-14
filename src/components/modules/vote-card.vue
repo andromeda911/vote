@@ -6,16 +6,12 @@
         <div class="vote-diagram">
             <h4>{{ obj.vote_title }}</h4>
 
-            <vote-diagram :up="Math.ceil(upBalance) || Math.ceil(obj.vote_up_bal)" :down="100000" />
+            <vote-diagram :up="Math.ceil(upBalance) || Math.ceil(obj.vote_up_bal)" :down="250000" />
 
             <div class="button-group" v-if="$route.name != 'home' && $route.name != 'current'">
                 <button class="button button__success" v-on:click="voteUp(obj.vote_up_addr)">
                     {{ $t('main[3][4]') }}
                 </button>
-
-                <!-- <button class="button button__error" v-on:click="voteDown(obj.vote_down_addr)">
-                    {{ $t('main[3][5]') }}
-                </button> -->
             </div>
 
             <gradient-button
